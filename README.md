@@ -25,5 +25,5 @@ For example, if for a particular user the destination is FR, then the prediction
 
 [FR]  gives a score <img src="https://render.githubusercontent.com/render/math?math=NDCG = (2^1 - 1)/(log_2 (1%2B1)) = 1">
 
-[US,FR] gives a score <img src="https://render.githubusercontent.com/render/math?math=DCG = ((2^0 - 1)/(log_2 (1%2B1)) %2B (2^1 - 1)/(log_2 (2%2B1))">
+[US,FR] gives a score <img src="https://render.githubusercontent.com/render/math?math=DCG = ((2^0 - 1)/(log_2 (1%2B1)) %2B (2^1 - 1)/(log_2 (2%2B1)) = 0.6309 ">
 
