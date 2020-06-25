@@ -1,6 +1,8 @@
 # Airbnb_New_User_Bookings
 Kaggle Recruitment Contest
 
+URL : https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings
+
 Problem Statement:
 
 New users on Airbnb can book a place to stay in 34,000+ cities across 190+ countries. By accurately predicting where a new user will book their first travel experience, Airbnb can share more personalized content with their community, decrease the average time to first booking, and better forecast demand.
@@ -34,22 +36,35 @@ Approach:
 Firstly the data related to click stream (sessions.csv) contained lot of null values. The clcik stream data capture the web elements each user has clicked upon and the time spent on each page. The diversity in the webelements columns was huge. The task to consolidate the webelements into various buckets based on the user activity was a exhaustive task and has consumed the maximum time. Next the data related to the user demographics have lot of inconsistent values and null values. The user profile data had to be sanitized based on datetime features. Despite the higher missing values percentages in the user demographics we have retained the features by imputing certain columns because the outcome of the problem statement is hugely dependent on the user demographics. Also we have use Levenstein distances framework into the implementation to create a proximity score based on the mother toungue of the user the Language of the destination as a feature. Our approach was based on few hypotheses and they are:
 
 •	Age might be a major predictor because
+
   o	Older people have more savings and time, meaning they can afford to travel to expensive places
+  
   o	Younger people are more adventurous. So, they might be open to trying offbeat countries, but can probably only afford cheaper ones
+  
   o	The more the proportion of people of their own age in the destination country, more the suitability of the activities/tourist attractions to the user
+  
   o	Older people might prefer going to countries where it is easy to get by, maybe due to similarity of languages. Younger ones might be more open to countries with alien languages.
  
 •	Financial affluence of the person
   o	No direct indicator present in the data. Therefore, it wasn’t possible to do any form of user-level feature cross using user’s financial status and the cost of living of the destination country.
+  
   o	Instead, we tried to derive implicit features, like number of unique devices the person owns, the number of apple products and number of tablets (the more they own, the higher the probability of them being affluent)
+  
 •	Seasonality
+
 •	Latent information contained in browsing patterns
+
   o	There was no information in sessions data regarding which country the user browsed for. So, action-wise time elapsed and frequencies were used to determine if they implicitly captured any hidden pattern connected to the first travel destination.
 
 Challenges :
+
 •	Unacceptable amount of Missing data in few prominent features.
+
 •	Heavily imbalanced dataset. 
+
 •	Leveraging the data collectively from all datasets to create a final table of meaningful features was a herculean task.
+
 •	There was no information regarding the content the user browsed for.
+
 •	Additional features like cost of living of destination country couldn’t be combined with this data since user-level financial information or other pertinent details were not provided, thereby preventing meaningful feature crosses.
 •	Custom generation of NDCG scorer and memory handling was a challenge too.
