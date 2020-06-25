@@ -13,7 +13,7 @@ As per the competition,for each user we predict 5 country destinations with decr
 
 The evaluation metric for this competition is NDCG (Normalized discounted cumulative gain) @k where k=5. NDCG is calculated as:
 
-$$DCG_k$$ = ∑i=1 to k 2^reli−1/log_2 (i+1),
+$$DCG_{k}$$ = ∑i=1 to k 2^reli−1/log_2 (i+1),
 nDCG_k = DCG_k/IDCG_k,
 where reli is the relevance of the result at position i.
 
