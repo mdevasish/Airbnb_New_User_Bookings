@@ -67,4 +67,5 @@ Challenges :
 •	There was no information regarding the content the user browsed for.
 
 •	Additional features like cost of living of destination country couldn’t be combined with this data since user-level financial information or other pertinent details were not provided, thereby preventing meaningful feature crosses.
+
 •	Custom generation of NDCG scorer and memory handling was a challenge too.
