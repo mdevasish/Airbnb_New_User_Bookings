@@ -14,7 +14,9 @@ As per the competition,for each user we predict 5 country destinations with decr
 The evaluation metric for this competition is NDCG (Normalized discounted cumulative gain) @k where k=5. NDCG is calculated as:
 
 $$DCG_{k}$$ = ∑i=1 to k 2^reli−1/log_2 (i+1),
+
 nDCG_k = DCG_k/IDCG_k,
+
 where reli is the relevance of the result at position i.
 
 IDCGk is the maximum possible (ideal) DCG for a given set of queries. All NDCG calculations are relative values on the interval 0.0 to 1.0.
@@ -25,3 +27,5 @@ For example, if for a particular user the destination is FR, then the prediction
 
 [FR]  gives a NDCG=2^1−1log2(1+1)=1.0
 [US,FR] gives a DCG=20−1log2(1+1)+21−1log2(2+1)=11.58496=0.6309 
+
+$$\sum_{i=1}^n X_i$$
