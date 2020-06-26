@@ -19,7 +19,7 @@ The evaluation metric for this competition is NDCG (Normalized discounted cumula
 
 <img src="https://render.githubusercontent.com/render/math?math=nDCG_k = DCG_k/IDCG_k">,
 
-where r is the relevance of the result at position i. And IDCGk is the maximum possible (ideal) DCG for a given set of queries. All NDCG calculations are relative values on the interval 0.0 to 1.0.
+where r is the relevance of the result at position i. And <img src="https://render.githubusercontent.com/render/math?math=IDCG_k"> is the maximum possible (ideal) <img src="https://render.githubusercontent.com/render/math?math=DCG_k"> for a given set of queries. All NDCG calculations are relative values on the interval 0.0 to 1.0.
 
 For each new user, you are to make a maximum of 5 predictions on the country of the first booking. The ground truth country is marked with relevance = 1, while the rest have relevance = 0.
 
